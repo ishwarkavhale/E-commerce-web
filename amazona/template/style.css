@@ -28,6 +28,9 @@ body {
   font-size: 2.5rem;
   font-weight: bold;
 }
+.brand a:hover {
+  color: #ffffff;
+}
 .header a {
   color: #ffffff;
   text-decoration: none;
@@ -54,6 +57,9 @@ a {
 }
 a:hover {
   color: #ff8000;
+}
+li {
+  list-style-type: none;
 }
 /* Home main content style */
 
@@ -98,4 +104,43 @@ a:hover {
 }
 .product-rating {
   margin-bottom: 1rem;
+}
+
+.brand button {
+  font-size: 3rem;
+  padding: 0.5rem;
+  color: #ffffff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.sidebar {
+  position: fixed;
+  transform: translateX(-30rem);
+  width: 30rem;
+  background-color: #f0f0f0;
+  height: 100%;
+}
+.sidebar h3 {
+  margin-left: 1rem;
+}
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.sidebar-close-button {
+  border-radius: 0.6rem;
+  border: 0.1rem #000000 solid;
+  font-size: 2rem;
+  padding: 0.5rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  width: 3rem;
+  height: 3rem;
+  background-color: #ffffff;
+  position: absolute;
+  right: 0.5rem;
+  top: 1.5rem;
+  cursor: pointer;
 }
