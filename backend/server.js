@@ -1,10 +1,10 @@
 const express = require('express');
-const Data = require('./Data.js');
+const data = require('./data.js');
 
 const app = express();
 
 app.get('/', (req, res) => {
-  res.send(Data.products);
+  res.send(data.text);
 });
 
 app.listen(5000, () => {
