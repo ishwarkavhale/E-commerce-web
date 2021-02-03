@@ -1,5 +1,4 @@
 const Data = {
-  text: 'hello world',
   products: [
     {
       _id: '1',

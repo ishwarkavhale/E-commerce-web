@@ -3,8 +3,8 @@ const data = require('./data.js');
 
 const app = express();
 
-app.get('/', (req, res) => {
-  res.send(data.text);
+app.get('/api/products', (req, res) => {
+  res.send(data.products);
 });
 
 app.listen(5000, () => {

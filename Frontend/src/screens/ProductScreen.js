@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import Data from '../Data';
 
 function ProductScreen(props) {
-  console.log(props.match.params.id);
   const product = Data.products.find((x) => x._id === props.match.params.id);
   return (
     <div>
@@ -33,7 +32,7 @@ function ProductScreen(props) {
         </div>
         <div className="details-action">
           <ul>
-            <li>Price: {product.price}</li>
+            <li>Price: ${product.price}</li>
             <li>Status: {product.status}</li>
             <li>
               Qty:
