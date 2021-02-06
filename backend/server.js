@@ -1,11 +1,15 @@
 const express = require('express');
-const data = require('./data.js');
+const data = require('./data');
 
 const app = express();
 
-app.get('/api/products', (req, res) => {
-  res.send(data.products);
-});
+try {
+  app.get('/api/products', (req, res) => {
+    res.send(data.products);
+  });
+} catch (error) {
+  console.error(error);
+}
 
 app.listen(5000, () => {
   console.log('Server started at http://localhost:5000');
