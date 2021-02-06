@@ -4,14 +4,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import { listProduct } from '../actions/productActions';
 
 function Home() {
-  const productList = useSelector((state) => state.productList);
-  const { products, loading, error } = productList;
+  const productsList = useSelector((state) => state.productsList); //productsList from store.js its reducer
+  const { products, loading, error } = productsList;
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(listProduct());
   }, [dispatch]);
   return loading ? (
-    <div>Loading...</div>
+    <div className="loading">Loading...</div>
   ) : error ? (
     <div>{error}</div>
   ) : (
