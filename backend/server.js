@@ -1,8 +1,13 @@
 const express = require('express');
 const data = require('./data');
+const connectDB = require('./db');
+const userRoute = require('./routes/userRoute');
 
 const app = express();
 
+connectDB();
+
+app.use('/api/users', userRoute);
 try {
   app.get('/api/products', (req, res) => {
     res.send(data.products);

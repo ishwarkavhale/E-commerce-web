@@ -2,18 +2,13 @@
   "name": "e-commerce-web",
   "version": "1.0.0",
   "description": "",
-  "main": "backend/server.js",
-  "dependencies": {
-    "express": "^4.17.1",
-    "redux-thunk": "^2.3.0"
-  },
-  "devDependencies": {},
+  "main": "index.js",
   "scripts": {
     "test": "node backend/server.js",
     "server": "nodemon backend/server.js ",
     "start": "node backend/server.js",
     "client": "npm start --prefix Frontend",
-    "clientinstall": "npm install --prefix  Frontend",
+    "clientinstall": "npm install --prefix  client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
@@ -25,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/ishwarkavhale/E-commerce-web/issues"
   },
-  "homepage": "https://github.com/ishwarkavhale/E-commerce-web#readme"
+  "homepage": "https://github.com/ishwarkavhale/E-commerce-web#readme",
+  "dependencies": {
+    "config": "^3.3.4"
+  }
 }

@@ -9,6 +9,7 @@ const Data = {
       price: 60,
       rating: 4.5,
       numReview: 10,
+      inStock: 3,
     },
     {
       _id: '2',
@@ -19,6 +20,7 @@ const Data = {
       price: 67,
       rating: 4.2,
       numReview: 15,
+      inStock: 6,
     },
     {
       _id: '3',
@@ -29,6 +31,7 @@ const Data = {
       price: 50,
       rating: 3.9,
       numReview: 11,
+      inStock: 7,
     },
     {
       _id: '4',
@@ -39,6 +42,7 @@ const Data = {
       price: 60,
       rating: 4.6,
       numReview: 10,
+      inStock: 2,
     },
     {
       _id: '5',
@@ -49,6 +53,7 @@ const Data = {
       price: 61,
       rating: 4.0,
       numReview: 8,
+      inStock: 10,
     },
   ],
 };
