@@ -13,7 +13,7 @@ router.get('/createadmin', async (req, res) => {
     const newUser = await user.save();
     res.send(newUser);
   } catch (err) {
-    res.send({ msg: error.message });
+    res.send({ msg: err.message });
   }
 });
 
