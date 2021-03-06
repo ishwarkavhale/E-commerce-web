@@ -1,4 +1,4 @@
 {
-  "MongoURI": " mongodb://127.0.0.1:27017/amaze",
+  "MongoURI": " mongodb://127.0.0.1:27017/amazona",
   "jwtSecret": "secret"
 }
