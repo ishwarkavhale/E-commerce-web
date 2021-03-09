@@ -1,21 +1,40 @@
 const express = require('express');
 const User = require('../models/userModel');
+const getToken = require('../util');
 const router = express.Router();
 
-router.post('/signin', async (req, res) => {
-  const { email, password } = req.body;
-  const signinUser = await User.findOne({
+router.post('/register', async (req, res) => {
+  const { name, email, password } = req.body;
+  const user = new User({
+    name: name,
     email: email,
     password: password,
   });
+  const newUser = await user.save();
+  if (newUser) {
+    res.send({
+      id: newUser.id,
+      name: newUser.name,
+      email: newUser.email,
+      token: getToken(newUser),
+    });
+  } else {
+    res.status(401).send({ msg: 'Invalid Email or Password' });
+  }
+});
 
+router.post('/signin', async (req, res) => {
+  const signinUser = await User.findOne({
+    email: req.body.email,
+    password: req.body.password,
+  });
   if (signinUser) {
     res.send({
-      _id: signinUser.id,
+      id: signinUser.id,
       name: signinUser.name,
       email: signinUser.email,
       isAdmin: signinUser.isAdmin,
-      token: getToken(user),
+      token: getToken(signinUser),
     });
   } else {
     res.status(401).send({ msg: 'Invalid Email or Password' });

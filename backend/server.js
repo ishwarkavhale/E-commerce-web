@@ -2,10 +2,12 @@ const express = require('express');
 const data = require('./data');
 const connectDB = require('./db');
 const userRoute = require('./routes/userRoute');
-
-const app = express();
+const bodyParser = require('body-parser');
 
 connectDB();
+
+const app = express();
+app.use(bodyParser.json());
 
 app.use('/api/users', userRoute);
 try {
